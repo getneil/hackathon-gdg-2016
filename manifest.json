@@ -1,0 +1,7 @@
+{
+  "name": "El Biko GDG",
+  "short_name": "el-biko",
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "portrait"
+}
