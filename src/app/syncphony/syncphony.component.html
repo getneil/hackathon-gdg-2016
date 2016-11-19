@@ -1,3 +1,11 @@
 <p>
   syncphony works!
+  <youtube-player
+    [videoId]="id"
+    (ready)="savePlayer($event)"
+    (change)="onStateChange($event)"
+  >
+  </youtube-player>
+  <button type="button" class="btn btn-default" (click)="playVideo()">Play</button>
+  <button type="button" class="btn btn-default" (click)="pauseVideo()">Pause</button>
 </p>

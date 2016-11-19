@@ -12,4 +12,23 @@ export class SyncphonyComponent implements OnInit {
   ngOnInit() {
   }
 
+  id = 'HL1UzIK-flA';
+  private player;
+  private ytEvent;
+
+  onStateChange(event) {
+    this.ytEvent = event.data;
+  }
+  savePlayer(player) {
+    this.player = player;
+  }
+
+  playVideo() {
+    this.player.seekTo(45, true);
+    this.player.playVideo();
+  }
+
+  pauseVideo() {
+    this.player.pauseVideo();
+  }
 }
