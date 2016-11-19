@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: '',  component: ListComponent },
   { path: 'new', component: EditorComponent },
-  { path: 'syncphony/:id', component: SyncphonyComponent }
+  { path: 'syncphony', component: SyncphonyComponent }
 ];
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],
