@@ -6,6 +6,12 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from 'angularfire2';
 import { LoginComponent } from './login/login.component';
+import { ListComponent } from './list/list.component';
+import { EditorComponent } from './editor/editor.component';
+import { SyncphonyComponent } from './syncphony/syncphony.component';
+
+
+import { AppRoutingModule }     from './app-routing.module';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDmhzSs8g-3wr6FCHKQRzj8Og-VTpAfMGg',
@@ -19,12 +25,16 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    ListComponent,
+    EditorComponent,
+    SyncphonyComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    AppRoutingModule,
     AngularFireModule.initializeApp(firebaseConfig),
   ],
   providers: [],
