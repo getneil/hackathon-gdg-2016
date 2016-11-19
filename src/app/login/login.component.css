@@ -1,0 +1,37 @@
+h3 {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 20px;
+}
+header {
+  position: relative;
+}
+header > div {
+  position: relative;
+  height: 70px;
+  width: 100%;
+}
+figure {
+  position: absolute;
+  width: 140px;
+  left: 50%;
+  margin: 0px;
+  padding: 0px;
+  margin-left: -70px;
+}
+figure img {
+  width: 140px;
+  height: 140px;
+  border-radius: 70px;
+}
+
+button {
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+}
+figure button {
+  top: 50%;
+  margin-top: -18px;
+  margin-left: -50px;
+}

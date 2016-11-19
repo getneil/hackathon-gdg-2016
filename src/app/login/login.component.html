@@ -1,0 +1,15 @@
+<header class="mdl-color-text--white mdl-color--light-blue-700">
+  <h3>Syncphoney</h3>
+  <div class="">
+    <figure [hidden]="!hasSession" >
+      <img [src]="photo" alt="profile pic" />
+
+      <button (click)="logout()"  id="sign-out" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
+        Sign-out
+      </button>
+    </figure>
+    <button [hidden]="hasSession" (click)="login()" id="sign-in" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
+      <i class="material-icons">account_circle</i> Sign-in with Google
+    </button>
+  </div>
+</header>
