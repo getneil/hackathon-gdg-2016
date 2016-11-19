@@ -1,4 +1,26 @@
 section{
   posiiton: relative;
   width: 100%;
+  padding: 20px;
+}
+section > div {
+  margin-bottom: 10px;
+}
+ul {
+  list-style: none;
+  padding: 0px;
+}
+ul li {
+  margin-bottom: 20px;
+}
+.demo-card-wide.mdl-card {
+  width: 100%;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('/assets/welcome_card.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
 }

@@ -11,8 +11,12 @@ import { AngularFire, FirebaseListObservable, AuthProviders, AuthMethods } from 
 export class ListComponent implements OnInit {
   private channels: Observable<any[]>;
   private hasSession: Boolean = false;
+  private search;
   constructor(public af: AngularFire) {
     this.channels = af.database.list('/channels');
+    this.search = {
+      filter: '',
+    }
   }
   ngOnInit(): void {
     this.af.auth.subscribe(auth => {

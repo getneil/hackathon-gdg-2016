@@ -14,6 +14,7 @@ import { UserService } from './user.service';
 import { ChannelsService } from './channels.service';
 
 import { AppRoutingModule }     from './app-routing.module';
+import { FuzzyPipe } from './fuzzy.pipe';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDmhzSs8g-3wr6FCHKQRzj8Og-VTpAfMGg',
@@ -30,7 +31,8 @@ export const firebaseConfig = {
     LoginComponent,
     ListComponent,
     EditorComponent,
-    SyncphonyComponent
+    SyncphonyComponent,
+    FuzzyPipe
   ],
   imports: [
     BrowserModule,

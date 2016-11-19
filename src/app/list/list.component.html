@@ -1,5 +1,22 @@
 <section>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="search" name="search" id="search" [(ngModel)]="search.filter">
+    <label class="mdl-textfield__label" for="search">Search</label>
+  </div>
   <ul>
-    <li *ngFor='let channel of channels | async'> {{ channel | json}}</li>
+    <li *ngFor='let channel of channels | async | fuzzy:search  '>
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+          <h2 class="mdl-card__title-text">{{channel.title}}</h2>
+        </div>
+        <div class="mdl-card__supporting-text">{{channel.description}}</div>
+        <div class="mdl-card__actions mdl-card--border">
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+            [routerLink]="['/syncphony', channel.$key ]">
+            Syncphonize
+          </a>
+        </div>
+      </div>
+    </li>
   </ul>
 </section>
