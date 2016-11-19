@@ -3,7 +3,7 @@ yarn.lock
 # compiled output
 /dist
 /tmp
-
+firebase-debug.log
 # dependencies
 /node_modules
 /bower_components

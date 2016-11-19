@@ -1,11 +1,13 @@
-<p>
-  syncphony works!
-  <youtube-player
-    [videoId]="id"
-    (ready)="savePlayer($event)"
-    (change)="onStateChange($event)"
-  >
-  </youtube-player>
-  <button type="button" class="btn btn-default" (click)="playVideo()">Play</button>
-  <button type="button" class="btn btn-default" (click)="pauseVideo()">Pause</button>
-</p>
+<section>
+  <figure *ngIf="id">
+    <youtube-player
+      [videoId]="id"
+      (ready)="savePlayer($event)"
+      (change)="onStateChange($event)"
+    >
+    </youtube-player>
+  </figure>
+  <button [hidden]="!isOwner || playing" (click)="playVideo()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+    Begin Syncphony!
+  </button>
+</section>

@@ -1,7 +1,7 @@
 {
   "rules": {
-    "messages": {
-      ".read": "auth != null || auth == null",
+    "channels": {
+      ".read": "true",
       ".write": "auth != null"
     }
   }
