@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
   private hasSession: Boolean = false;
   private displayName: String = '';
   private photo: String = '';
-  constructor(private af: AngularFire) {
+  constructor(public af: AngularFire) {
   }
 
   login() {

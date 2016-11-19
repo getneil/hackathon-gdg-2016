@@ -1,3 +1,5 @@
-<p>
-  list works!
-</p>
+<section>
+  <ul>
+    <li *ngFor='let channel of channels | async'> {{ channel | json}}</li>
+  </ul>
+</section>

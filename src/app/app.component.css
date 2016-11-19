@@ -1,0 +1,8 @@
+#new-sync{
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
+#new-sync.hide {
+  display: none;
+}

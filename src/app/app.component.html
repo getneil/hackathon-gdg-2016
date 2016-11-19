@@ -1,4 +1,11 @@
 <section class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <app-login></app-login>
   <router-outlet></router-outlet>
+  <button id="new-sync"
+    [routerLink]="['new']"
+    [hidden]="!hasSession"
+    [routerLinkActive]="['hide']"
+    class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+    <i class="material-icons">add</i>
+  </button>
 </section>

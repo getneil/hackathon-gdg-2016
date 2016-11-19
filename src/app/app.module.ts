@@ -10,6 +10,8 @@ import { ListComponent } from './list/list.component';
 import { EditorComponent } from './editor/editor.component';
 import { SyncphonyComponent } from './syncphony/syncphony.component';
 
+import { UserService } from './user.service';
+import { ChannelsService } from './channels.service';
 
 import { AppRoutingModule }     from './app-routing.module';
 
@@ -37,7 +39,10 @@ export const firebaseConfig = {
     AppRoutingModule,
     AngularFireModule.initializeApp(firebaseConfig),
   ],
-  providers: [],
+  providers: [
+    UserService,
+    ChannelsService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
