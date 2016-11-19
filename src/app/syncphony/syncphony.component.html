@@ -7,7 +7,7 @@
     >
     </youtube-player>
   </figure>
-  <button [hidden]="!isOwner || playing" (click)="playVideo()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+  <button [hidden]="!isOwner" [disabled]="hit" (click)="playVideo()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
     Begin Syncphony!
   </button>
 </section>

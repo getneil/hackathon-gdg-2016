@@ -39,12 +39,13 @@ export class SyncphonyComponent implements OnInit {
           if (youtube.length === 2) {
             this.id = youtube[1];
           }
-          console.log(this.id, data.playStart, this.playing);
-          if (this.id && data.playStart && !this.playing) {
+          if (this.id && data.playStart) {
             const now = (new Date()).getTime();
             const left = data.playStart - now;
             this.playing = setTimeout(() => {
               this.startVideo();
+              this.playing = null;
+              this.hit = false;
             }, left);
           }
         })
@@ -61,7 +62,9 @@ export class SyncphonyComponent implements OnInit {
   startVideo() {
     this.player.playVideo();
   }
+  hit = false
   playVideo() {
+    this.hit = true;
     const keys = ['title','description','youtube','poster','ownerId'];
     const update = {
       playStart: ((new Date()).getTime() + 10000),

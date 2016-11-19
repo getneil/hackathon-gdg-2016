@@ -27,6 +27,7 @@ export class EditorComponent implements OnInit {
     const data = {
       ownerId: this.user.id,
       poster: this.user.name,
+      playStart: '',
     };
     keys.forEach((k) => {
       data[k] = this[k];
